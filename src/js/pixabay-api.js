@@ -37,7 +37,9 @@ export async function loadData(searchText, callbackOnSuccess, callbackOnError, c
     }
 
     try {
-        let response = await axios.get('https://pixabay.com/api/?', {
+        let response = await axios({
+            method: 'get',
+            url: 'https://pixabay.com/api/?',
             params: {
                 key: '45339856-2e70ead6ce9cf82bdbbd89c7e',
                 q: searchText,
