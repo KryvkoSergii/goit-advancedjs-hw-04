@@ -2,6 +2,7 @@ import { loadData, raiseReachedEnd } from './js/pixabay-api'
 import { render } from './js/render-functions';
 
 const mainForm = document.querySelectorAll(".search")[0];
+
 let loader = document.querySelector("div.loader-panel");
 let loadMoreBtn = document.querySelector(".load-more");
 
