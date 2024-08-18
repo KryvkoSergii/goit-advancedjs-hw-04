@@ -20,6 +20,15 @@ let raiseEmptyResponse = () => {
     });
 }
 
+export function raiseReachedEnd() {
+    iziToast.show({
+        message: `We're sorry, but you've reached the end of search results.`,
+        position: "topRight",
+        backgroundColor: 'rgb(250,128,114)',
+        messageColor: 'rgb(255,255,255)'
+    });
+}
+
 export async function loadData(searchText, callbackOnSuccess, callbackOnError, callOnFinally, currentPage = 1) {
     if (searchText === null || searchText === "") {
         raiseEmptySearchCriteria();

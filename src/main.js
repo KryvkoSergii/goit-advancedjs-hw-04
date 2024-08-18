@@ -1,4 +1,4 @@
-import { loadData } from './js/pixabay-api'
+import { loadData, raiseReachedEnd } from './js/pixabay-api'
 import { render } from './js/render-functions';
 
 const mainForm = document.querySelectorAll(".search")[0];
@@ -15,6 +15,7 @@ function showOrHideLoadMoreButton(loaded) {
         loadMoreBtn.style.display = "block";
     } else {
         loadMoreBtn.style.display = "none";
+        raiseReachedEnd();
     }
 }
 
