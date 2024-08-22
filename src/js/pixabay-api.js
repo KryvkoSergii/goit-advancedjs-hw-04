@@ -30,7 +30,7 @@ export function raiseReachedEnd() {
 }
 
 export async function loadData(searchText, callbackOnSuccess, callbackOnError, callOnFinally, currentPage = 1) {
-    if (searchText === null || searchText === "") {
+    if (searchText === null || searchText.trim() === "") {
         raiseEmptySearchCriteria();
         callOnFinally();
         return;
